@@ -4,7 +4,7 @@ import csv
 r = requests.get("https://newsapi.org/v2/everything?q=apple&from=2023-01-28&to=2023-01-28&sortBy=popularity&apiKey=551fde63a636435c990650ae795d9bdb")
 
 
-def get_news(country, file_name, api_key='551fde63a636435c990650ae795d9bdb'):         # yyy/mm/dd
+def get_news(country, file_name, api_key=''):         
     url =   f'https://newsapi.org/v2/top-headlines?country={country}&apiKey={api_key}'
     r = requests.get(url)
     content = r.json()
